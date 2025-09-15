@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SF-Pro-Display-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* TT Commons fonts */
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TT-Commons-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TT-Commons-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TT-Commons-DemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TT-Commons-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@theme {
+  --font-sfpro: "SF Pro Display", sans-serif;
+  --font-ttcommons: "TT Commons", sans-serif;
+}
+
+@layer utilities {
+  .font-sfpro {
+    font-family: var(--font-sfpro);
+  }
+  .font-ttcommons {
+    font-family: var(--font-ttcommons);
+  }
+}
