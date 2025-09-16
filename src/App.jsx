@@ -13,7 +13,7 @@ function App() {
       <HeroBanner></HeroBanner>
       <OrderInfo></OrderInfo>
       <SpecialOffers></SpecialOffers>
-      <CategoryTabs></CategoryTabs>
+
       <MenuSection></MenuSection>
       <Footer></Footer>
     </div>
