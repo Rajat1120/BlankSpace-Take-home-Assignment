@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const CategorySlice = createSlice({
   name: "Menu",
-  initialState: { name: "" },
+  initialState: { name: "Starters" },
   reducers: {
     setCategory(state, action) {
       state.name = action.payload;
