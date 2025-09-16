@@ -51,6 +51,7 @@
   --font-sfpro: "SF Pro Display", sans-serif;
   --font-ttcommons: "TT Commons", sans-serif;
   --color-secondary: #757575;
+  --color-background: #f7f7f7;
 }
 
 @layer utilities {

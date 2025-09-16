@@ -12,7 +12,7 @@ const OrderInfo = () => {
           <Button
             onClick={() => setDeliveryOption("pickup")}
             className={`rounded-sm ${
-              deliveryOption === "pickup" ? "bg-white" : "!bg-[#f3f3f3]"
+              deliveryOption === "pickup" ? "bg-white" : "!bg-background"
             }`}
             variant="secondary"
           >
@@ -23,7 +23,7 @@ const OrderInfo = () => {
           <Button
             onClick={() => setDeliveryOption("delivery")}
             className={`  rounded-sm ${
-              deliveryOption === "delivery" ? "bg-white" : "!bg-[#f3f3f3]"
+              deliveryOption === "delivery" ? "bg-white" : "!bg-background"
             }`}
             variant="secondary"
           >
