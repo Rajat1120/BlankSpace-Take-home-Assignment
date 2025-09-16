@@ -34,11 +34,11 @@ const Header = () => {
         <div className="flex gap-18   items-center">
           {/* Gift card button */}
           <Button
-            className={"flex items-center rounded-full gap-2"}
+            className={"flex items-center  rounded-full gap-2"}
             variant="primary"
           >
             <img className="h-6" src={giftCard} alt="" />
-            <span className="text-nowrap font-ttcommons font-medium cursor-pointer">
+            <span className="text-nowrap text-sm font-ttcommons font-medium cursor-pointer">
               Gift Cards
             </span>
           </Button>
