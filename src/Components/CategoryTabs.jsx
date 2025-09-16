@@ -52,7 +52,7 @@ const CategoryTabs = () => {
   };
 
   return (
-    <div className="flex sticky top-[65px] z-10 bg-white border-b-3 border-gray-200 justify-between items-center gap-2 mb-10">
+    <div className="flex sticky top-[61px] z-10 bg-white border-b-3 border-gray-200 justify-between items-center gap-2 mb-10">
       <div className="flex items-center gap-2">
         <Button className={"!pl-0"} variant="secondary">
           <img className="h-6 w-6" src={MenuImg} alt="" />
