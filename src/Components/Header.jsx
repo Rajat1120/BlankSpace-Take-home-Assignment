@@ -2,7 +2,7 @@ import Input from "./Common/Input";
 import logo from "../assets/logo.svg";
 import menuSvg from "../assets/menu.png";
 import cartPng from "../assets/Cart.png";
-import giftCard from "../assets/giftcard.png";
+import giftCard from "../assets/GiftCard.png";
 import { useState } from "react";
 import Button from "./Common/Button";
 const Header = () => {

@@ -1,10 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import watchIcon from "../assets/Watch.png";
 import Button from "./Common/Button";
 import mapImg from "../assets/Map.png";
 
 const OrderInfo = () => {
   const [deliveryOption, setDeliveryOption] = useState("pickup");
+  const [loading, setLoadig] = useState(true);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setLoadig(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  /* Skeleton Ui */
+  if (loading) {
+    return (
+      <div className="flex flex-col md:flex-row md:mx-20 mx-5 md:px-10 mt-5 py-6 justify-between items-start animate-pulse">
+        <div className="w-full md:w-auto">
+          <div className="flex space-x-2 my-5">
+            <div className="bg-gray-200 rounded h-10 w-24"></div>
+            <div className="bg-gray-200 rounded h-10 w-24"></div>
+          </div>
+          <div className="hidden md:flex flex-col">
+            <div className="bg-gray-200 rounded h-6 w-48 mb-2"></div>
+            <div className="flex gap-2">
+              <div className="bg-gray-200 rounded h-4 w-32"></div>
+              <div className="bg-gray-200 rounded h-4 w-20"></div>
+            </div>
+          </div>
+          <div className="md:flex hidden justify-start mt-2">
+            <div className="bg-gray-200 rounded h-4 w-24"></div>
+          </div>
+        </div>
+        <div className="flex gap-5 my-0 w-full md:w-auto md:my-5 items-start">
+          <div className="bg-gray-200 rounded h-14 w-40"></div>
+          <div className="bg-gray-200 rounded h-32 w-60 hidden md:flex"></div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col md:flex-row md:mx-20 mx-5 md:px-10 mt-5 justify-between items-start">
       <div className="w-full md:w-auto">

@@ -1,4 +1,4 @@
-import itemImg from "../assets/itemimg.png";
+import itemImg from "../assets/itemImg.png";
 import Button from "./Common/Button";
 
 import close from "../assets/closeImg.png";
