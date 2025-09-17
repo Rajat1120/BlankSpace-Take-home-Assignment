@@ -8,7 +8,7 @@ import Button from "./Common/Button";
 const Header = () => {
   const [inputval, setInputVal] = useState();
   return (
-    <div className="md:px-12 px-5 z-10 py-4 md:my-0 sticky top-0 bg-white md:py-1 md:border-b border-gray-300 flex justify-between items-center">
+    <header className="md:px-12 px-5 z-10 py-4 md:my-0 sticky top-0 bg-white md:py-1 md:border-b border-gray-300 flex justify-between items-center">
       <div className="flex justify-between md:w-auto w-full  md:gap-10 items-center">
         {/* Sidebar */}
         <Button className={"rounded-full cursor-pointer"}>
@@ -74,7 +74,7 @@ const Header = () => {
           </span>
         </Button>
       </div>
-    </div>
+    </header>
   );
 };
 

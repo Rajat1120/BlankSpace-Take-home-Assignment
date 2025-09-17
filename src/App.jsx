@@ -1,4 +1,3 @@
-import CategoryTabs from "./Components/CategoryTabs";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import HeroBanner from "./Components/HeroBanner";
@@ -11,11 +10,15 @@ function App() {
     <div>
       <Header></Header>
       <HeroBanner></HeroBanner>
-      <OrderInfo></OrderInfo>
-      <SpecialOffers></SpecialOffers>
+      <main>
+        <OrderInfo></OrderInfo>
+        <SpecialOffers></SpecialOffers>
 
-      <MenuSection></MenuSection>
-      <Footer></Footer>
+        <MenuSection></MenuSection>
+      </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 }
