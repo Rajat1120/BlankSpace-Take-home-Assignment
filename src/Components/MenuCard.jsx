@@ -27,12 +27,16 @@ const MenuCard = ({ item }) => {
             <span className="text-sm font-medium">{item.price}</span>
             <span className="text-sm font-medium">{item.calories}</span>
           </div>
-          <span className="text-secondary text-sm line-clamp-4">
+          <span className="text-secondary text-xs md:text-sm line-clamp-4">
             {item.description}
           </span>
         </div>
         <div className="flex py-5 flex-shrink-0">
-          <img className="w-40 h-30 object-fit" src={itemImg} alt="" />
+          <img
+            className="md:w-40 w-30 h-20 md:h-30 object-fit"
+            src={itemImg}
+            alt=""
+          />
         </div>
         <Button className="absolute rounded-full !px-2 !py-2 bottom-5 border border-gray-200 right-5">
           <img className="h-5 w-5" src={addIcon} alt="" />

@@ -31,7 +31,7 @@ const MenuSection = () => {
   }, [dispatch]);
 
   return (
-    <div id="menu-scroll" className="my-20 mx-20 px-10">
+    <div id="menu-scroll" className="md:my-20 my-5 md:mx-20 mx-5 md:px-10">
       <CategoryTabs />
       <div className="my-10 space-y-10 overflow-y-scroll h-[80vh] scrollbar-hide  scroll-smooth">
         {categoryItemsDetails.map((categoryObj) => {
@@ -46,7 +46,7 @@ const MenuSection = () => {
               className="category-section"
             >
               <h3 className="text-2xl font-[550] mb-4">{categoryName}</h3>
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {items.map((item, i) => (
                   <Menucard key={i} item={item} />
                 ))}

@@ -32,11 +32,11 @@ const ItemConfigureModal = ({ item }) => {
       onClick={() => dispatch(closeMenuModal())} // closes modal when clicking outside(false))} // closes modal when clicking outside
     >
       <div
-        className="bg-white p-6 rounded-lg max-w-[940px] fixed w-full max-h-[90vh] overflow-hidden  top-[50px]"
+        className="bg-white  overflow-y-auto md:overflow-y-hidden md:p-6 rounded-lg h-screen md:max-w-[940px] fixed w-full md:max-h-[90vh] overflow-hidden top-0  md:top-[50px]"
         onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside modal
       >
         {/* Header */}
-        <div className="flex justify-between items-center mb-4 sticky top-0 bg-white z-10">
+        <div className="flex justify-between items-center mb-4 p-5 md:p-0 sticky top-0 bg-white z-10">
           <div
             onClick={() => dispatch(closeMenuModal())} // closes modal when clicking outside(false))}
             className="cursor-pointer"
@@ -60,13 +60,13 @@ const ItemConfigureModal = ({ item }) => {
             />
           </div>
         </div>
-        <div className="flex gap-x-16 h-full">
+        <div className="flex flex-col md:flex-row gap-x-16 h-full">
           {/* Item image */}
           <div className="flex-1 px-5 py-10">
             <img className="" src={itemImg} alt="" />
           </div>
           {/* Item details */}
-          <div className="flex-[1.5] px-5 scrollbar-hide overflow-y-auto max-h-[80vh]">
+          <div className="flex-[1.5]  px-5 scrollbar-hide md:overflow-y-auto max-h-[80vh]">
             <div className="flex flex-col gap-y-2">
               <h3 className="text-2xl font-semibold text-nowrap">
                 {item.name}
@@ -252,7 +252,7 @@ const ItemConfigureModal = ({ item }) => {
                       <img
                         src={Coffe}
                         className="h-10  object-cover w-10"
-                        alt=""
+                        alt="item-image"
                       />
                     </div>
                     <span className="text-sm font-extralight">Smoothies</span>
@@ -265,14 +265,14 @@ const ItemConfigureModal = ({ item }) => {
                 <div className="h-[1.2px] w-full bg-gray-200"></div>
               </div>
             </div>
-            <div className="py-5">
+            <div className="py-5 pb-40 md:pb-0">
               <span className="font-semibold ">Special Comments</span>
               <Input
                 inputClassName="!min-h-30 pb-20 !focus:outline-none leading-none !focus:ring-gray-400 !focus:ring-2"
                 className="border-2 my-5  min-h-30 border-gray-200 rounded-lg"
               ></Input>
             </div>
-            <div className="my-10 flex justify-between items-center">
+            <div className="md:my-10 py-5  w-full fixed md:static gap-x-5 md:py-5 px-5 md:px-0 md:w-auto bottom-0 left-0 right-0 bg-white flex justify-between md:justify-between items-center">
               <div className="flex gap-x-4 items-center">
                 <img className="h-10" src={decreaseBtn} alt="" />
                 <span>1</span>
@@ -280,7 +280,9 @@ const ItemConfigureModal = ({ item }) => {
               </div>
               <Button
                 onClick={() => dispatch(closeMenuModal())}
-                className={"!bg-red-700 rounded-lg !px-10"}
+                className={
+                  "!bg-red-700 flex flex-shrink-0 rounded-lg !px-5 md:!px-10"
+                }
               >
                 <span className="text-white">Add 1 to Order $14.50</span>
               </Button>

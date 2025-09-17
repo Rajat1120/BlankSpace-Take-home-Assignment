@@ -8,8 +8,8 @@ import Button from "./Common/Button";
 const Header = () => {
   const [inputval, setInputVal] = useState();
   return (
-    <div className="px-12 z-10 sticky top-0 bg-white py-1 border-b border-gray-300 flex justify-between items-center">
-      <div className="flex  gap-10 items-center">
+    <div className="md:px-12 px-5 z-10 py-4 md:my-0 sticky top-0 bg-white md:py-1 md:border-b border-gray-300 flex justify-between items-center">
+      <div className="flex justify-between md:w-auto w-full  md:gap-10 items-center">
         {/* Sidebar */}
         <Button className={"rounded-full cursor-pointer"}>
           <img className="min-w-5  h-5" src={menuSvg} alt="" />
@@ -19,10 +19,21 @@ const Header = () => {
         <span className="min-w-16 flex flex-shrink-0 items-center justify-center cursor-pointer min-h-8">
           <img className=" !min-w-10 !min-h-10" src={logo} alt="" />
         </span>
+
+        <Button
+          className={
+            " !border flex md:hidden border-gray-200 md:!px-2 !px-4 !py-2 md:!py-1 rounded-sm "
+          }
+          variant="primary"
+        >
+          <span className="text-nowrap  font-sfpro text-sm cursor-pointer">
+            Sign in
+          </span>
+        </Button>
       </div>
 
       {/* Search Input */}
-      <div className="w-full mx-5 md:mx-20 flex justify-start">
+      <div className="w-full mx-5 md:mx-20 hidden md:flex justify-start">
         <div className="w-full max-w-180 md:max-w-160 pl-20 min-w-40 pr-2">
           <Input
             placeholder="Search our menu..."
@@ -33,7 +44,7 @@ const Header = () => {
         </div>
       </div>
       <div className="flex gap-10 items-center">
-        <div className="flex gap-10  items-center">
+        <div className="hidden md:flex gap-10  items-center">
           {/* Gift card button */}
           <Button
             className={"flex !flex-shrink-0 items-center  rounded-full gap-2"}
@@ -53,7 +64,9 @@ const Header = () => {
           </Button>
         </div>
         <Button
-          className={" !border border-gray-200 !px-2 !py-1 rounded-sm "}
+          className={
+            " !border hidden md:flex border-gray-200 md:!px-2 !px-4 !py-2 md:!py-1 rounded-sm "
+          }
           variant="primary"
         >
           <span className="text-nowrap  font-sfpro text-sm cursor-pointer">
