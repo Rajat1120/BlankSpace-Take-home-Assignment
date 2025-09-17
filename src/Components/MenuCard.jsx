@@ -6,11 +6,14 @@ import ItemConfigureModal from "./ItemConfigureModal";
 import { useDispatch, useSelector } from "react-redux";
 
 import { openMenuModal } from "../Redux/AppSlice";
+import SubItemConfigureModal from "./SubItemConfigureModal";
 
 const MenuCard = ({ item }) => {
   const dispatch = useDispatch();
   const selectedItemId = useSelector((state) => state.app.selectedMenuItemId);
+  const secondModalId = useSelector((state) => state.app.secondModalItemId);
   const isModalOpen = selectedItemId === item.id;
+  const isSecondModalOpen = secondModalId === item.id;
   return (
     <>
       {/* Card */}
@@ -40,6 +43,9 @@ const MenuCard = ({ item }) => {
       {isModalOpen ? (
         <ItemConfigureModal item={item}></ItemConfigureModal>
       ) : null}
+
+      {/* Second Modal */}
+      {isSecondModalOpen ? <SubItemConfigureModal item={item} /> : null}
     </>
   );
 };

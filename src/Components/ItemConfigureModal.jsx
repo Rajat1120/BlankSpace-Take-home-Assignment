@@ -13,7 +13,7 @@ import Coffe from "../assets/coffe.jpeg";
 import increaseBtn from "../assets/increase.png";
 import decreaseBtn from "../assets/decrease.png";
 import { useDispatch } from "react-redux";
-import { closeMenuModal } from "../Redux/AppSlice";
+import { closeMenuModal, openSecondModal } from "../Redux/AppSlice";
 import { useEffect } from "react";
 
 const ItemConfigureModal = ({ item }) => {
@@ -112,7 +112,10 @@ const ItemConfigureModal = ({ item }) => {
               </div>
               {/* Options */}
               <div className="flex border-b border-gray-200 flex-col gap-y-4">
-                <div className="px-2 cursor-pointer flex rounded-lg bg-white justify-between">
+                <div
+                  onClick={() => dispatch(openSecondModal())}
+                  className="px-2 cursor-pointer flex rounded-lg bg-white justify-between"
+                >
                   <div className="flex items-center  gap-x-2">
                     <div className="overflow-hidden rounded-lg">
                       <img
@@ -128,7 +131,10 @@ const ItemConfigureModal = ({ item }) => {
                   </div>
                 </div>
                 <div className="h-[1.2px] w-full bg-gray-200"></div>
-                <div className="px-2 cursor-pointer flex rounded-lg bg-white justify-between">
+                <div
+                  onClick={() => dispatch(openSecondModal())}
+                  className="px-2 cursor-pointer flex rounded-lg bg-white justify-between"
+                >
                   <div className="flex items-center  gap-x-2">
                     <div className="overflow-hidden  rounded-lg">
                       <img
@@ -146,7 +152,10 @@ const ItemConfigureModal = ({ item }) => {
                   </div>
                 </div>
                 <div className="h-[1.2px] w-full bg-gray-200"></div>
-                <div className="px-2 cursor-pointer  flex rounded-lg bg-white justify-between">
+                <div
+                  onClick={() => dispatch(openSecondModal())}
+                  className="px-2 cursor-pointer  flex rounded-lg bg-white justify-between"
+                >
                   <div className="flex items-center  gap-x-2">
                     <div className="overflow-hidden rounded-lg">
                       <img
@@ -164,7 +173,10 @@ const ItemConfigureModal = ({ item }) => {
                   </div>
                 </div>
                 <div className="h-[1.2px] w-full bg-gray-200"></div>
-                <div className="px-2 cursor-pointer flex rounded-lg bg-white justify-between">
+                <div
+                  onClick={() => dispatch(openSecondModal())}
+                  className="px-2 cursor-pointer flex rounded-lg bg-white justify-between"
+                >
                   <div className="flex items-center  gap-x-2">
                     <div className="overflow-hidden rounded-lg">
                       <img
@@ -266,7 +278,10 @@ const ItemConfigureModal = ({ item }) => {
                 <span>1</span>
                 <img className="h-10" src={increaseBtn} alt="" />
               </div>
-              <Button className={"!bg-red-700 rounded-lg !px-10"}>
+              <Button
+                onClick={() => dispatch(closeMenuModal())}
+                className={"!bg-red-700 rounded-lg !px-10"}
+              >
                 <span className="text-white">Add 1 to Order $14.50</span>
               </Button>
             </div>

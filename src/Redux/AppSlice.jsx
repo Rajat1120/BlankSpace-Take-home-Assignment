@@ -4,17 +4,31 @@ import { createSlice } from "@reduxjs/toolkit";
 const AppSlice = createSlice({
   name: "app",
   initialState: {
-    selectedMenuItemId: null, // null = closed, string/number = which item is open
+    selectedMenuItemId: null,
+    secondModalItemId: null,
   },
   reducers: {
     openMenuModal(state, action) {
-      state.selectedMenuItemId = action.payload; // item.id
+      state.selectedMenuItemId = action.payload;
     },
     closeMenuModal(state) {
       state.selectedMenuItemId = null;
     },
+    openSecondModal(state) {
+      state.secondModalItemId = state.selectedMenuItemId;
+      state.selectedMenuItemId = null;
+    },
+    closeSecondModal(state) {
+      state.selectedMenuItemId = state.secondModalItemId;
+      state.secondModalItemId = null;
+    },
   },
 });
 
-export const { openMenuModal, closeMenuModal } = AppSlice.actions;
+export const {
+  openSecondModal,
+  closeSecondModal,
+  openMenuModal,
+  closeMenuModal,
+} = AppSlice.actions;
 export default AppSlice.reducer;

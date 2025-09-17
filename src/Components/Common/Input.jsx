@@ -8,6 +8,7 @@ const Input = ({
   name,
   className = "",
   inputClassName = "",
+  ringColor = "focus:ring-gray-400", // 👈 default ring color
 }) => {
   return (
     <div className={`flex flex-col ${className}`}>
@@ -23,7 +24,7 @@ const Input = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400 ${
+        className={`rounded-md px-3 py-2 focus:outline-none focus:ring-2 ${ringColor} ${
           error ? "border-red-500" : "border-gray-300"
         } ${inputClassName}`}
       />
