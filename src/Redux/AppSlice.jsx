@@ -6,6 +6,7 @@ const AppSlice = createSlice({
   initialState: {
     selectedMenuItemId: null,
     secondModalItemId: null,
+    selectedOption: null,
   },
   reducers: {
     openMenuModal(state, action) {
@@ -22,6 +23,12 @@ const AppSlice = createSlice({
       state.selectedMenuItemId = state.secondModalItemId;
       state.secondModalItemId = null;
     },
+    setSelectedOption(state, action) {
+      state.selectedOption = action.payload;
+    },
+    clearSelectedOption(state) {
+      state.selectedOption = null;
+    },
   },
 });
 
@@ -30,5 +37,7 @@ export const {
   closeSecondModal,
   openMenuModal,
   closeMenuModal,
+  setSelectedOption,
+  clearSelectedOption,
 } = AppSlice.actions;
 export default AppSlice.reducer;
